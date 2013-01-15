@@ -1000,3 +1000,9 @@ div.add-or-remove-shortcuts {
 .region-sidebar-first .form-text {
   width: 180px;
 }
+
+
+/* general status colors. */
+.status-0 { background-color: #ffeeee}
+.status-1 { background-color: #ffffee}
+.status-2 { background-color: #eeffee}
