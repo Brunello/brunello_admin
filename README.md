@@ -10,6 +10,8 @@ Based on the core theme 'Seven', this is a two-column admin theme for Drupal 7
 * Generic status colors (0, 1, 2 -> red, yellow, green)
 * Placeholder "custom" css file
 * Improved file structure
+* Unique body class per content type shared on both node add and node edit
+  pages
 
 ###NOTE:
 You must disable Seven and select this theme as the "Administration theme" on
