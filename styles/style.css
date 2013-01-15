@@ -465,6 +465,10 @@ tr.odd {
 tr.odd {
   background: #fff;
 }
+tr.even:hover,
+tr.odd:hover {
+  background: #f3f8db;
+}
 tr.drag {
   background: #fe7;
 }
