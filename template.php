@@ -22,6 +22,15 @@ function brunello_admin_preprocess_html(&$vars) {
   drupal_add_css(path_to_theme() . '/styles/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE6.
   drupal_add_css(path_to_theme() . '/styles/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 6', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  // Add a unique class per content type that is shared on both node create and
+  // node add pages.
+  if ((arg(0) == 'node') && (arg(1) == 'add')) {
+    $vars['classes_array'][] = 'node-add-edit-' . arg(2);
+  }
+  elseif ((arg(0) == 'node') && (arg(2) == 'edit')) {
+    $node = node_load(arg(1));
+    $vars['classes_array'][] = 'node-add-edit-' . $node->type;
+  }
 }
 
 /**
