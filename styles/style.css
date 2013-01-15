@@ -123,12 +123,12 @@ ol {
 }
 .item-list ul li.collapsed,
 ul.menu li.collapsed {
-  list-style-image:url(../../misc/menu-collapsed.png);
+  list-style-image:url(../images/menu-collapsed.png);
   list-style-type:disc;
 }
 .item-list ul li.expanded,
 ul.menu li.expanded {
-  list-style-image:url(../../misc/menu-expanded.png);
+  list-style-image:url(../images/menu-expanded.png);
   list-style-type:circle;
 }
 quote,
@@ -196,7 +196,6 @@ pre {
   float: right; /* LTR */
   width: 240px;
   padding-left: 10px; /* LTR */
-  background: #333;
 }
 #branding div.block form label {
   display: none;
@@ -340,8 +339,13 @@ ul.secondary li.active a.active {
   color: #fff;
   background: #666;
 }
+#sidebar-first {
+  float: left;
+  width: 200px;
+}
 #content {
-  clear: left;
+  float: left;
+  width: 1000px;
 }
 
 /**
@@ -354,6 +358,7 @@ ul.secondary li.active a.active {
   background: #fff;
   position: relative;
   color: #333;
+  width: 1200px;
 }
 #secondary-links ul.links li {
   padding: 0 10px 10px 0; /* LTR */
@@ -392,7 +397,7 @@ ul.admin-list li {
   border-top: 1px solid #ccc;
   margin-left: 0; /* LTR */
   margin-bottom: 10px;
-  background: url(images/list-item.png) no-repeat 0 11px; /* LTR */
+  background: url(../images/list-item.png) no-repeat 0 11px; /* LTR */
   list-style-type: none;
   list-style-image: none;
 }
@@ -660,7 +665,7 @@ a.button {
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #d2d2d2;
   border-right-color: #d2d2d2;
-  background: url(images/buttons.png) 0 0 repeat-x;
+  background: url(../images/buttons.png) 0 0 repeat-x;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -721,7 +726,7 @@ ul.action-links li {
 }
 ul.action-links a {
   padding-left: 15px; /* LTR */
-  background: transparent url(images/add.png) no-repeat 0 center;
+  background: transparent url(../images/add.png) no-repeat 0 center;
   line-height: 30px;
 }
 
@@ -847,12 +852,12 @@ ol.task-list li {
   color: #adadad;
 }
 ol.task-list li.active {
-  background: transparent url(images/task-item.png) no-repeat 3px 50%; /* LTR */
+  background: transparent url(../images/task-item.png) no-repeat 3px 50%; /* LTR */
   padding: 0.5em 1em 0.5em 20px; /* LTR */
   color: #000;
 }
 ol.task-list li.done {
-  background: transparent url(images/task-check.png) no-repeat 0 50%;
+  background: transparent url(../images/task-check.png) no-repeat 0 50%;
   color: green;
 }
 
@@ -986,4 +991,8 @@ div.add-or-remove-shortcuts {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+}
+
+.region-sidebar-first .form-text {
+  width: 180px;
 }

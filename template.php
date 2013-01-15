@@ -3,31 +3,31 @@
 /**
  * Override or insert variables into the maintenance page template.
  */
-function seven_preprocess_maintenance_page(&$vars) {
+function brunello_admin_preprocess_maintenance_page(&$vars) {
   // While markup for normal pages is split into page.tpl.php and html.tpl.php,
   // the markup for the maintenance page is all in the single
   // maintenance-page.tpl.php template. So, to have what's done in
-  // seven_preprocess_html() also happen on the maintenance page, it has to be
+  // brunello_admin_preprocess_html() also happen on the maintenance page, it has to be
   // called here.
-  seven_preprocess_html($vars);
+  brunello_admin_preprocess_html($vars);
 }
 
 /**
  * Override or insert variables into the html template.
  */
-function seven_preprocess_html(&$vars) {
+function brunello_admin_preprocess_html(&$vars) {
   // Add conditional CSS for IE8 and below.
-  drupal_add_css(path_to_theme() . '/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/styles/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE7 and below.
-  drupal_add_css(path_to_theme() . '/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/styles/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
   // Add conditional CSS for IE6.
-  drupal_add_css(path_to_theme() . '/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 6', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/styles/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 6', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 }
 
 /**
  * Override or insert variables into the page template.
  */
-function seven_preprocess_page(&$vars) {
+function brunello_admin_preprocess_page(&$vars) {
   $vars['primary_local_tasks'] = $vars['tabs'];
   unset($vars['primary_local_tasks']['#secondary']);
   $vars['secondary_local_tasks'] = array(
@@ -39,7 +39,7 @@ function seven_preprocess_page(&$vars) {
 /**
  * Display the list of available node types for node creation.
  */
-function seven_node_add_list($variables) {
+function brunello_admin_node_add_list($variables) {
   $content = $variables['content'];
   $output = '';
   if ($content) {
@@ -63,7 +63,7 @@ function seven_node_add_list($variables) {
  *
  * Use unordered list markup in both compact and extended mode.
  */
-function seven_admin_block_content($variables) {
+function brunello_admin_admin_block_content($variables) {
   $content = $variables['content'];
   $output = '';
   if (!empty($content)) {
@@ -86,9 +86,9 @@ function seven_admin_block_content($variables) {
  *
  * Use our own image versions, so they show up as black and not gray on gray.
  */
-function seven_tablesort_indicator($variables) {
+function brunello_admin_tablesort_indicator($variables) {
   $style = $variables['style'];
-  $theme_path = drupal_get_path('theme', 'seven');
+  $theme_path = drupal_get_path('theme', 'brunello_admin');
   if ($style == 'asc') {
     return theme('image', array('path' => $theme_path . '/images/arrow-asc.png', 'alt' => t('sort ascending'), 'width' => 13, 'height' => 13, 'title' => t('sort ascending')));
   }
@@ -100,16 +100,16 @@ function seven_tablesort_indicator($variables) {
 /**
  * Implements hook_css_alter().
  */
-function seven_css_alter(&$css) {
+function brunello_admin_css_alter(&$css) {
   // Use Seven's vertical tabs style instead of the default one.
   if (isset($css['misc/vertical-tabs.css'])) {
-    $css['misc/vertical-tabs.css']['data'] = drupal_get_path('theme', 'seven') . '/vertical-tabs.css';
+    $css['misc/vertical-tabs.css']['data'] = drupal_get_path('theme', 'brunello_admin') . '/vertical-tabs.css';
   }
   if (isset($css['misc/vertical-tabs-rtl.css'])) {
-    $css['misc/vertical-tabs-rtl.css']['data'] = drupal_get_path('theme', 'seven') . '/vertical-tabs-rtl.css';
+    $css['misc/vertical-tabs-rtl.css']['data'] = drupal_get_path('theme', 'brunello_admin') . '/vertical-tabs-rtl.css';
   }
   // Use Seven's jQuery UI theme style instead of the default one.
   if (isset($css['misc/ui/jquery.ui.theme.css'])) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('theme', 'seven') . '/jquery.ui.theme.css';
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('theme', 'brunello_admin') . '/jquery.ui.theme.css';
   }
 }

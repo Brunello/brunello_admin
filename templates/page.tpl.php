@@ -7,11 +7,20 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php print render($primary_local_tasks); ?>
+    <?php if ($page['top_right']) : ?>
+      <?php print render($page['top_right']); ?>
+    <?php endif; ?>
   </div>
 
   <div id="page">
     <?php if ($secondary_local_tasks): ?>
       <div class="tabs-secondary clearfix"><?php print render($secondary_local_tasks); ?></div>
+    <?php endif; ?>
+    
+    <?php if ($page['sidebar_first']) : ?>
+      <div id="sidebar-first">
+        <?php print render($page['sidebar_first']); ?>
+      </div>
     <?php endif; ?>
 
     <div id="content" class="clearfix">
