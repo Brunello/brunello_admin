@@ -6,6 +6,7 @@ core = 7.x
 
 stylesheets[screen][] = styles/reset.css
 stylesheets[screen][] = styles/style.css
+stylesheets[screen][] = styles/custom.css
 
 settings[shortcut_module_link] = 1
 
