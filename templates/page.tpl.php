@@ -7,9 +7,6 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php print render($primary_local_tasks); ?>
-    <?php if ($page['top_right']) : ?>
-      <?php print render($page['top_right']); ?>
-    <?php endif; ?>
   </div>
 
   <div id="page">

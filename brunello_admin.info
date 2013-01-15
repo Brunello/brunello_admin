@@ -9,7 +9,6 @@ stylesheets[screen][] = styles/style.css
 
 settings[shortcut_module_link] = 1
 
-regions[top_right] = Top right
 regions[content] = Content
 regions[help] = Help
 regions[page_top] = Page top
