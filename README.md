@@ -17,11 +17,5 @@ Based on the core theme 'Seven', this is a two-column admin theme for Drupal 7
 * Updated action button styles. See: http://drupal.org/node/1167350. (Will be
   implemented in Drupal 8)
 
-###NOTE:
-You must disable Seven and select this theme as the "Administration theme" on
-on the Appearance page in order for this theme to work properly. If you have 
-enabled this theme but still don't see the sidebar region rendered, ensure that
-you have selected "brunello_admin" from the "Administration theme" select list.
-
 Dev snapshot available on GitHub:
 https://github.com/balsama/brunello_admin
