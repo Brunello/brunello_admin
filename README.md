@@ -12,6 +12,10 @@ Based on the core theme 'Seven', this is a two-column admin theme for Drupal 7
 * Improved file structure
 * Unique body class per content type shared on both node add and node edit
   pages
+* "Showing 1-50 of 2345  Next 50 >" type pagers. See http://drupal.org/node/538788
+  (which was neven implemented in the core Seven theme)
+* Updated action button styles. See: http://drupal.org/node/1167350. (Will be
+  implemented in Drupal 8)
 
 ###NOTE:
 You must disable Seven and select this theme as the "Administration theme" on
