@@ -4,7 +4,7 @@ Based on the core theme 'Seven', this is a two-column admin theme for Drupal 7
 
 ###Improvements
 
-* Fixed width (1000px)
+* Fixed width (1000px content, 200px sidebar, 1200px total)
 * Added sidebar left region to hold navigation menu
 * Added table-row hover style
 * Generic status colors (0, 1, 2 -> red, yellow, green)
