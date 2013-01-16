@@ -8,6 +8,8 @@ stylesheets[screen][] = styles/reset.css
 stylesheets[screen][] = styles/style.css
 stylesheets[screen][] = styles/custom.css
 
+scripts[] = js/brunello_admin.js
+
 settings[shortcut_module_link] = 1
 
 regions[content] = Content
